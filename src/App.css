@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+#mi-enlace {
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+.logo2 {
+  font-size: 32px;
+  color: rgb(17, 17, 17);
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  z-index: 1050;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;  /* Alinea los elementos a la derecha */
+  width: 100%;  /* Asegura que la barra ocupe toda la anchura */
+}
+
+.navbar-toggler {
+  margin-left: auto;  /* Esto asegura que el botón de menú se alinee a la derecha */
+}
+
+.navbar-collapse {
+  display: flex;
+  justify-content: flex-end;  /* Alinea los enlaces a la derecha */
+}
+
+.navbar a {
+  position: relative;
+  font-size: 18px;
+  color: black;
+  font-weight: 500;
+  margin-left: 40px;
+}
+
+.navbar a::before {
+  content: '';
+  position: absolute;
+  top: 120%; 
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: wheat;
+  transition: .3s;
+}
+
+.navbar a:hover::before {
+  width: 100%;
+}
+
+#mi-enlace img {
+  width: 40px;
+  height: auto;
+}
+
+.carousel-container {
+  width: 30%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.carousel img {
+  border-radius: 25px;
+  height: 400px;
+  object-fit: cover;
+}
+#mi-enlace2 img {
+  width: 200px;
+  height: auto;
+}
+
+#myVideoContainer {
+  /* Estilos adicionales para este contenedor en particular */
+ 
+  /* padding: 20px; */
+  border-radius: 10%;
+  overflow: hidden;
+}
