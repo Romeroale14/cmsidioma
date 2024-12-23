@@ -1,25 +1,34 @@
-/* Estilo para las imágenes en el div */
-.navimg {
-  width: 50px;  /* Ajusta el ancho de las imágenes */
-  height: auto; /* Mantiene la proporción de la altura */
-  position: relative; /* Ajusta la posición del contenido dentro del div */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Delius&family=Reem+Kufi+Ink&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* Estilo para los logos */
+.logo2 img {
+  width: 50px;  /* Ajusta el tamaño del logo según lo necesites */
+  height: auto;  /* Mantiene la proporción de la altura */
+  margin-top: 5px;
+  margin-left: 20px;
 }
 
-/* Estilo para la lista de navegación */
-.nav {
-  position: absolute; /* Posiciona la lista en un lugar específico */
-  right: 0; /* Alinea la lista a la parte derecha del contenedor */
-  top: 0; /* Asegura que esté alineada en la parte superior, si es necesario */
-  margin-top: 20px; /* Mueve la lista hacia abajo */
-  margin-right: 50px;
+
+.navbar-nav  {
+  font-family: "Reem Kufi Ink", serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
 }
 
-/* Estilo para el div del navegador */
-.navegador {
-
-  background-color: white;  
-  width: 100%;
-  height: 100px;
-  position: relative; /* Asegúrate de que el div tenga un contenedor relativo */
+/* Asegurarte de que .cont cubra toda la pantalla */
+.cont {
+  background-color: white;  /* Fondo negro */
+  color: black;  /* Cambiar color de texto a blanco */
+  min-height: 100vh;  /* Asegurarse de que ocupe toda la altura de la pantalla */
+  display: flex;  /* Usar flexbox para que el contenedor se expanda completamente */
+  flex-direction: column;  /* Para que el contenido se apile verticalmente */
 }
 
+.navbar{
+  background-color: #4d82bc; /*color navegad0or*/
+  border-radius: 10px; /*contorno navegador*/
+}
+
+/* Cambiar el color de fondo de la barra de navegación */

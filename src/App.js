@@ -6,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ClipLoader } from 'react-spinners';
 import espanol from './assets/espana.png';
 
-
 function App() {
   const [authors, setAuthors] = useState([]);
   const { getAuthors } = useContentful();
@@ -49,40 +48,50 @@ function App() {
 
 
   return (
-    <div>
 
-      <div className='navegador'>
-        {authors.length > 0 &&
-          authors.map((author, index) => (
-            <ul class="nav">
-              <li class="nav-item">
-                <a class="nav-link active" href="#"><img src={author.aleman} className='navimg'  alt="Alemán" /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img src={author.china} className='navimg'   alt="Chino" /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#"><img src={author.italiano} className='navimg'   alt="Italiano" /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#"><img src={author.frances} className='navimg'   alt="Francés" /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#"><img src={espanol} className='navimg'   alt="Español" /></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#"><img src={author.ingles} className='navimg'   alt="Ingles" /></a>
-              </li>
-            </ul>
-          ))}
+    <div className='cont'>
+
+
+      <div class="m-4">
+
+        <nav class="navbar navbar-expand-lg navbar-light ">
+          <div class="container-fluid">
+            <div>
+              {authors.length > 0 &&
+                authors.map((author, index) => (
+                  <a href="/" className="logo2" key={index}>
+                    <img src={author.logoPa} alt="logo" />
+                  </a>
+                ))}
+            </div>
+
+
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+              <div class="navbar-nav ms-auto">
+                <a href="#" class="nav-item nav-link active  me-4">Ingles</a>
+                <a href="#" class="nav-item nav-link active me-4">Frances</a>
+                <a href="#" class="nav-item nav-link active me-4">Italiano</a>
+                <a href="#" class="nav-item nav-link active me-4">Aleman</a>
+                <a href="#" class="nav-item nav-link active me-4">Chino</a>
+                <a href="#" class="nav-item nav-link active me-4">Español</a>
+              </div>
+
+            </div>
+          </div>
+        </nav>
+
+        
       </div>
+            
+
 
 
     </div>
 
 
-
   );
 }
-
 export default App;
