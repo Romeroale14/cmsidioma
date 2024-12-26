@@ -28,18 +28,18 @@ const useContentful = () => {
         //   : ""; // Asegura que la URL tenga protocolo
 
         //   //----------------------------------------------
-        //   const carrusel2Url = item.fields.carrusel2?.fields?.file?.url
-        //   ? `https:${item.fields.carrusel2.fields.file.url}`
-        //   : ""; // Asegura que la URL tenga protocolo
+          const fondo1 = item.fields.fondo1?.fields?.file?.url
+           ? `https:${item.fields.fondo1.fields.file.url}`
+          : ""; // Asegura que la URL tenga protocolo
            
            //----------------------------------------------
            const logoPaUrl = item.fields.logoPa?.fields?.file?.url
            ? `https:${item.fields.logoPa.fields.file.url}`
            : ""; // Asegura que la URL tenga protocolo
-           //----------------------------------------------
-          //  const videoRepUrl = item.fields.videoRep?.fields?.file?.url
-          //  ? `https:${item.fields.videoRep.fields.file.url}`
-          //  : ""; // Asegura que la URL tenga protocolo
+          //----------------------------------------------
+           const FondoNavegador = item.fields.FondoNavegador?.fields?.file?.url
+            ? `https:${item.fields.FondoNavegador.fields.file.url}`
+           : ""; // Asegura que la URL tenga protocolo
    
   
         return {
@@ -55,7 +55,9 @@ const useContentful = () => {
           // aleman: alemanUrl,
           // frances: francesUrl,
           // italiano: italianoUrl,
+          fondo1:fondo1,
           logoPa: logoPaUrl,
+          FondoNavegador: FondoNavegador,
           // videoRep: videoRepUrl,
         };
       });

@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import useContentful from './useContentful';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ClipLoader } from 'react-spinners';
-import espanol from './assets/espana.png';
-
+import video from './assets/video.mp4';
 function App() {
   const [authors, setAuthors] = useState([]);
   const { getAuthors } = useContentful();
@@ -46,52 +45,29 @@ function App() {
     );
   }
 
-
   return (
+    <div className="plantilla">
 
-    <div className='cont'>
-
-
-      <div class="m-4">
-
-        <nav class="navbar navbar-expand-lg navbar-light ">
-          <div class="container-fluid">
-            <div>
-              {authors.length > 0 &&
-                authors.map((author, index) => (
-                  <a href="/" className="logo2" key={index}>
-                    <img src={author.logoPa} alt="logo" />
-                  </a>
-                ))}
-            </div>
-
-
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-              <div class="navbar-nav ms-auto">
-                <a href="#" class="nav-item nav-link active  me-4">Ingles</a>
-                <a href="#" class="nav-item nav-link active me-4">Frances</a>
-                <a href="#" class="nav-item nav-link active me-4">Italiano</a>
-                <a href="#" class="nav-item nav-link active me-4">Aleman</a>
-                <a href="#" class="nav-item nav-link active me-4">Chino</a>
-                <a href="#" class="nav-item nav-link active me-4">Español</a>
-              </div>
-
-            </div>
-          </div>
-        </nav>
-
-        
-      </div>
-            
-
-
+<div class="video-container">
+  
+   	<video autoPlay muted loop class="fillWidth visible-lg" >
+        <source src={video} type="video/mp4; "/>        
+        Your browser does not support the video tag.
+    </video>
+    <h1>hola</h1>
+    <div>
+    {authors.length > 0 &&
+            authors.map((author, index) => (
+              <img src={authors.fondo1} alt=""/>
+  ))}
+    </div>
+    
+    <h2>hola2</h2>
+</div>
+     
 
     </div>
-
-
   );
 }
+
 export default App;

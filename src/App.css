@@ -1,34 +1,22 @@
-
-
-@import url('https://fonts.googleapis.com/css2?family=Delius&family=Reem+Kufi+Ink&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-/* Estilo para los logos */
-.logo2 img {
-  width: 50px;  /* Ajusta el tamaño del logo según lo necesites */
-  height: auto;  /* Mantiene la proporción de la altura */
-  margin-top: 5px;
-  margin-left: 20px;
+body {
+  margin: 0; /* Elimina los márgenes del body para que el video ocupe toda la pantalla si es necesario */
 }
 
-
-.navbar-nav  {
-  font-family: "Reem Kufi Ink", serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 22px;
+.video-container {
+  position: relative; /* Importante: para posicionar el video absolutamente dentro */
+  top: 0;
+  left: 0;
+  height: 800px; /* O la altura que necesites */
+  width: 100%;
+  overflow: hidden; /* Evita que el video se desborde */
 }
 
-/* Asegurarte de que .cont cubra toda la pantalla */
-.cont {
-  background-color: white;  /* Fondo negro */
-  color: black;  /* Cambiar color de texto a blanco */
-  min-height: 100vh;  /* Asegurarse de que ocupe toda la altura de la pantalla */
-  display: flex;  /* Usar flexbox para que el contenedor se expanda completamente */
-  flex-direction: column;  /* Para que el contenido se apile verticalmente */
+video.fillWidth {
+  position: absolute; /* Clave para que el video se ajuste al contenedor */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Para que ocupe todo el alto también */
+  object-fit: cover; /* Escala el video para cubrir todo el contenedor */
+  z-index: -1;
 }
-
-.navbar{
-  background-color: #4d82bc; /*color navegad0or*/
-  border-radius: 10px; /*contorno navegador*/
-}
-
-/* Cambiar el color de fondo de la barra de navegación */
