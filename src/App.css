@@ -1,22 +1,174 @@
+/* Estilos generales para pantallas grandes */
 body {
-  margin: 0; /* Elimina los márgenes del body para que el video ocupe toda la pantalla si es necesario */
+  margin: 0;
+  position: relative;
 }
 
+/* Video responsive */
 .video-container {
-  position: relative; /* Importante: para posicionar el video absolutamente dentro */
+  display: flex;
+  position: relative;
   top: 0;
   left: 0;
-  height: 800px; /* O la altura que necesites */
+  height: 800px;
   width: 100%;
-  overflow: hidden; /* Evita que el video se desborde */
+  overflow: hidden;
 }
 
 video.fillWidth {
-  position: absolute; /* Clave para que el video se ajuste al contenedor */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Para que ocupe todo el alto también */
-  object-fit: cover; /* Escala el video para cubrir todo el contenedor */
+  height: 100%;
+  object-fit: cover;
   z-index: -1;
+}
+
+/* Fondo que se adapta */
+.fondo1 {
+  position: absolute;
+  margin-top: -135px;
+  width: 100%;
+  height: 120%;
+  z-index: -1;
+}
+
+/* Botón que se ajusta en PC */
+.btn-primary {
+  background-color: #1E4C5A !important;
+  color: white !important;
+  border-color: #1E4C5A !important;
+  position: absolute;
+  
+  margin: 0;
+  
+
+}
+
+.btn-primary:hover {
+  background-color: white !important;
+  color: #1E4C5A !important;
+  border-color: white !important;
+}
+
+/* Menú hamburguesa */
+.hamburger-menu {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 40px;
+  height: 90px;
+  padding: 0;
+  position: absolute;
+  top: 35px;
+  left: 40px;
+}
+.bar {
+  width: 100%; /* Asegura que las barras tengan todo el ancho del contenedor */
+  height: 5px; /* Ajusta la altura de las barras */
+  background-color: white; /* Color de las barras */
+  border-radius: 5px; /* Bordes redondeados para las barras */
+  transition: all 0.3s ease; /* Suaviza cualquier transición si las barras cambian */
+}
+
+/* Media Query para pantallas pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+  .video-container {
+    height: 300px;  /* Reducir el alto del video en pantallas pequeñas */
+  }
+
+  .btn-primary {
+    top: 260px; /* Ajustar la posición del botón en pantallas pequeñas */
+    font-size: 12px !important;  /* Reducir el tamaño del texto */
+  padding: 6px 12px !important;  /* Reducir el relleno del botón (tamaño de la caja del botón) */
+  border-radius: 4px !important;  /* Bordes redondeados más sutiles */
+  height: auto !important;  /* Ajustar altura automáticamente */
+  min-width: 90px !important;  /* Establecer un ancho mínimo */
+  line-height: 1.5 !important;  /* Ajustar la altura de la línea del texto */
+  left: 3px;;
+  }
+
+  .fondo1 {
+    margin-top: 1px;
+    height: 100%;
+  }
+
+  .lupa {
+    margin-top: 2vw;
+    margin-left: 90vw; /* Ajustar la lupa para pantallas más pequeñas */
+  }
+  
+}
+
+/* Media Query para pantallas medianas (de 769px a 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .video-container {
+    height: 500px;  /* Ajustar el alto del video en pantallas medianas */
+  }
+
+  .btn-primary {
+    top: 400px;  /* Ajustar la posición del botón */
+    left: 3px;
+    top: 450px !important;
+    
+  }
+
+  .fondo1 {
+    margin-top: -74px;  /* Ajustar la posición del fondo */
+  }
+  .lupa {
+    margin-top: 1.2vw;
+    margin-left: 95vw; /* Ajustar la lupa para pantallas más pequeñas */
+  }
+}
+
+/* Media Query para pantallas grandes (de 1025px a 1440px) */
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .video-container {
+    height: 700px;  /* Ajustar el alto del video en pantallas grandes */
+  }
+
+  .fondo1 {
+    margin-top: -100px; /* Ajustar la posición del fondo */
+  }
+  .lupa {
+    margin-top: 1.2vw;
+    margin-left: 95vw; /* Ajustar la lupa para pantallas más pequeñas */
+  }
+  .btn-primary {
+    top: 600px;  /* Ajustar la posición del botón */
+    left: 3px;
+    top: 650px !important;
+    
+  }
+}
+
+/* Media Query para pantallas extra grandes (mayores de 1440px) */
+@media (min-width: 1441px) {
+  .video-container {
+    height: 800px;  /* Mantener el alto del video en pantallas extra grandes */
+  }
+
+  .btn-primary {
+    top: 660px;  /* Ajustar la posición del botón en pantallas muy grandes */
+    left: 3px;
+    top: 750px !important;
+  }
+
+  .fondo1 {
+    margin-top: -135px; /* Ajustar la posición del fondo */
+  }
+  .lupa {
+    margin-top: 1.2vw;
+    margin-left: 95vw; /* Ajustar la lupa para pantallas más pequeñas */
+  }
+  .hamburger-menu {
+    
+    top: 100px;
+    left: 200px;
+  }
 }

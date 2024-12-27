@@ -5,6 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import { ClipLoader } from 'react-spinners';
 import video from './assets/video.mp4';
+import alemania from './assets/parte1.png';
+import alemania2 from './assets/parte2.png';
+import letra1 from './assets/letra1.png';
+import letra2 from './assets/letra2.png';
 function App() {
   const [authors, setAuthors] = useState([]);
   const { getAuthors } = useContentful();
@@ -44,27 +48,38 @@ function App() {
       </div>
     );
   }
+  
 
   return (
-    <div className="plantilla">
-
-<div class="video-container">
-  
-   	<video autoPlay muted loop class="fillWidth visible-lg" >
-        <source src={video} type="video/mp4; "/>        
-        Your browser does not support the video tag.
-    </video>
-    <h1>hola</h1>
     <div>
-    {authors.length > 0 &&
-            authors.map((author, index) => (
-              <img src={authors.fondo1} alt=""/>
-  ))}
-    </div>
-    
-    <h2>hola2</h2>
-</div>
+         <div class=" video-container">
+        <video autoPlay muted loop class="fillWidth visible-lg" >
+          <source src={video} type="video/mp4; " />
+        </video>
+
+
+
+        <img src={alemania} alt="" className='fondo1' />
+        <img src={letra1} alt="" className='fondo1' />
+        <img src={alemania2} alt="" className='fondo1' />
+        <img src={letra2} alt="" className='fondo1' />
+        <button type="button" class="btn btn-primary">See more &#8594; </button>
+
+
+        <button class="hamburger-menu" id="hamburger-btn" onclick="toggleMenu()">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </button>
+
+        
+
+      </div> 
      
+
+      
+
+
 
     </div>
   );
