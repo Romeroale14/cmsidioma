@@ -1,4 +1,13 @@
 /* Estilos generales para pantallas grandes */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;700&display=swap');
+*{
+   
+    font-family: "Poppins", serif;
+    font-weight: 400;
+    font-style: normal;
+  
+  
+}
 body {
   margin: 0;
   position: relative;
@@ -54,27 +63,91 @@ video.fillWidth {
 
 /* Menú hamburguesa */
 .hamburger-menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 40px;
-  height: 90px;
-  padding: 0;
-  position: absolute;
-  top: 35px;
-  left: 40px;
-}
-.bar {
-  width: 100%; /* Asegura que las barras tengan todo el ancho del contenedor */
-  height: 5px; /* Ajusta la altura de las barras */
-  background-color: white; /* Color de las barras */
-  border-radius: 5px; /* Bordes redondeados para las barras */
-  transition: all 0.3s ease; /* Suaviza cualquier transición si las barras cambian */
+  background-color: transparent !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-around !important;
+  width: 30px !important; /* Ancho más pequeño */
+  height: 25px !important; /* Altura más pequeña */
+  padding: 0 !important;
+  position: absolute !important;
+  top: 100px !important; /* Ajusta según lo necesites */
+  left: 200px !important; /* Ajusta según lo necesites */
 }
 
+.bar {
+  width: 100% !important; /* Ancho de las barras igual al contenedor */
+  height: 3px !important; /* Altura más pequeña para las barras */
+  background-color: white !important; /* Color de las barras */
+  border-radius: 2px !important; /* Bordes ligeramente redondeados */
+}
+
+
+
+
+.carrusel {
+  display: grid;
+  grid-auto-flow: column; /* Organiza los elementos en una fila */
+  align-items: center; /* Alinea verticalmente */
+  column-gap: 20px; /* Espacio entre los elementos */
+  background-color: white;
+  padding-top: 90px;
+  padding-left: 10px;
+}
+.carrusel h6 {
+  border-bottom: 2px solid blue; /* Línea azul */
+  padding-bottom: 5px; /* Espacio entre el texto y la línea */
+  margin-bottom: 10px; /* Ajuste del margen inferior */
+  width: 85%; /* Ajusta el ancho de la línea */
+}
+.carrusel h6.first {
+  border-bottom: 2px solid #0171C3; /* Línea roja */
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  width: 85%; /* Línea más corta */
+}
+
+.carrusel h6.second {
+  border-bottom: 2px solid #1E4C5A; /* Línea verde */
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  width: 65%; /* Línea más corta */
+}
+
+
+
+
+.carousel-inner img {
+  height: 300px;  /* Establece la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+}
+
+/* Cuadrado azul superpuesto */
+.overlay {
+  position: absolute;
+  top: 20%; /* Posiciona el cuadrado 20% desde la parte superior */
+  left: 10%; /* Posiciona el cuadrado 10% desde la izquierda */
+  width: 80%; /* Ancho del cuadrado (ajustable) */
+  height: 60%; /* Alto del cuadrado (ajustable) */
+  background-color: rgba(0, 0, 255, 0.5); /* Azul con opacidad */
+  z-index: 1; /* Asegura que el cuadrado esté encima del carrusel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el texto dentro del cuadro azul */
+.overlay-text {
+  color: white; /* Cambia el color del texto para que contraste con el fondo azul */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+/* ------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------ */
 /* Media Query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
   .video-container {
@@ -84,7 +157,7 @@ video.fillWidth {
   .btn-primary {
     top: 260px; /* Ajustar la posición del botón en pantallas pequeñas */
     font-size: 12px !important;  /* Reducir el tamaño del texto */
-  padding: 6px 12px !important;  /* Reducir el relleno del botón (tamaño de la caja del botón) */
+  padding: 5px 10px !important;  /* Reducir el relleno del botón (tamaño de la caja del botón) */
   border-radius: 4px !important;  /* Bordes redondeados más sutiles */
   height: auto !important;  /* Ajustar altura automáticamente */
   min-width: 90px !important;  /* Establecer un ancho mínimo */
@@ -101,7 +174,11 @@ video.fillWidth {
     margin-top: 2vw;
     margin-left: 90vw; /* Ajustar la lupa para pantallas más pequeñas */
   }
-  
+  .hamburger-menu {
+    
+    top: 10px !important;
+  left: 10px !important;
+  }
 }
 
 /* Media Query para pantallas medianas (de 769px a 1024px) */
@@ -124,6 +201,11 @@ video.fillWidth {
     margin-top: 1.2vw;
     margin-left: 95vw; /* Ajustar la lupa para pantallas más pequeñas */
   }
+  .hamburger-menu {
+    
+    top: 10px !important;
+  left: 10px !important;
+  }
 }
 
 /* Media Query para pantallas grandes (de 1025px a 1440px) */
@@ -145,6 +227,13 @@ video.fillWidth {
     top: 650px !important;
     
   }
+
+  .hamburger-menu {
+    
+    top: 10px !important;
+  left: 10px !important;
+  }
+  
 }
 
 /* Media Query para pantallas extra grandes (mayores de 1440px) */
@@ -168,7 +257,200 @@ video.fillWidth {
   }
   .hamburger-menu {
     
-    top: 100px;
-    left: 200px;
+    top: 120px !important;
+  left: 80px !important;
+  }
+}
+
+
+/* Estilos del carrusel */
+.carousel-inner img {
+  height: 300px;  /* Establece la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+}
+
+/* Cuadrado azul superpuesto con texto */
+.overlay {
+  position: absolute;
+  top: 80%; /* Posiciona el cuadrado 20% desde la parte superior */
+  left: 10%; /* Posiciona el cuadrado 10% desde la izquierda */
+  width: 40%; /* Ancho del cuadrado (ajustable) */
+  height: 60%; /* Alto del cuadrado (ajustable) */
+  background-color: rgba(0, 0, 255, 0.5); /* Azul con opacidad */
+  z-index: 1; /* Asegura que el cuadrado esté encima del carrusel */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estilo para el texto dentro del cuadro azul */
+.overlay-text {
+  color: white; /* Cambia el color del texto para que contraste con el fondo azul */
+  font-size: 20px;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Estilo para el contenedor del carrusel */
+.slider-container {
+  width: fit-content; /* Ocupa el espacio justo para el contenido */
+  max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
+  overflow-x: auto; /* o scroll, dependiendo del comportamiento que desees */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-top: 60px;
+  background-color: aqua;
+}
+
+.slider {
+  display: flex; /* Alinear las diapositivas horizontalmente */
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+  padding-left: 40px;
+}
+
+.slide {
+  min-width: 40%; /* Aumentamos el tamaño de cada diapositiva */
+  position: relative; /* Para posicionar el contenido de la diapositiva */
+  margin: 0 20px; /* Reducimos el espacio entre las cartas */
+}
+
+.slide img {
+  width: 100%; /* La imagen ocupa todo el ancho de la diapositiva */
+  height: 400px; /* Aumentamos la altura de las imágenes */
+  object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
+  display: block;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 102, 204, 0.7); /* Fondo azul con transparencia */
+  color: white;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0 -55px;
+}
+
+.slider-controls {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  margin-top: 30px; /* Margen inferior */
+}
+
+.slider-controls button {
+  background: none;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+
+/* Para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  .slider-container {
+    margin-top: 20px; /* Reducir el margen superior en pantallas pequeñas */
+  }
+
+  .slider {
+    padding-left: 10px; /* Reducir el padding en la parte izquierda */
+  }
+
+  .slide {
+    min-width: 80%; /* Reducir el tamaño de cada diapositiva */
+    margin: 0 10px; /* Reducir el margen entre las diapositivas */
+  }
+
+  .slide img {
+    height: 250px; /* Reducir la altura de las imágenes en pantallas pequeñas */
+  }
+
+  .slide-content {
+    padding: 10px; /* Reducir el padding del contenido en la diapositiva */
+  }
+
+  .slider-controls button {
+    width: 30px;
+    height: 30px; /* Reducir el tamaño de los botones de control */
+  }
+}
+
+/* Para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+  .slider-container {
+    margin-top: 40px; /* Ajustar el margen superior en pantallas medianas */
+  }
+
+  .slider {
+    padding-left: 20px; /* Reducir el padding en pantallas medianas */
+  }
+
+  .slide {
+    min-width: 60%; /* Reducir ligeramente el tamaño de las diapositivas */
+  }
+
+  .slide img {
+    height: 350px; /* Ajustar la altura de las imágenes */
+  }
+
+  .slider-controls button {
+    width: 35px;
+    height: 35px; /* Ajustar el tamaño de los botones */
+  }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 1025px) {
+  .slider-container {
+    margin-top: 60px; /* Mantener el margen superior en pantallas grandes */
+  }
+
+  .slider {
+    padding-left: 40px; /* Mantener el padding original en pantallas grandes */
+  }
+
+  .slide {
+    min-width: 40%; /* Mantener el tamaño original de las diapositivas */
+    margin: 0 20px; /* Mantener el margen original entre las diapositivas */
+  }
+
+  .slide img {
+    height: 400px; /* Mantener la altura original de las imágenes */
+  }
+
+  .slider-controls button {
+    width: 40px;
+    height: 40px; /* Mantener el tamaño original de los botones */
   }
 }
