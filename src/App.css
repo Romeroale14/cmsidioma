@@ -11,6 +11,8 @@
 body {
   margin: 0;
   position: relative;
+  overflow-x: hidden; /* Oculta solo la barra horizontal */
+
 }
 
 /* Video responsive */
@@ -49,7 +51,6 @@ video.fillWidth {
   color: white !important;
   border-color: #1E4C5A !important;
   position: absolute;
-  
   margin: 0;
   
 
@@ -96,12 +97,7 @@ video.fillWidth {
   padding-top: 90px;
   padding-left: 10px;
 }
-.carrusel h6 {
-  border-bottom: 2px solid blue; /* Línea azul */
-  padding-bottom: 5px; /* Espacio entre el texto y la línea */
-  margin-bottom: 10px; /* Ajuste del margen inferior */
-  width: 85%; /* Ajusta el ancho de la línea */
-}
+
 .carrusel h6.first {
   border-bottom: 2px solid #0171C3; /* Línea roja */
   padding-bottom: 5px;
@@ -117,33 +113,12 @@ video.fillWidth {
 }
 
 
-
-
-.carousel-inner img {
-  height: 300px;  /* Establece la altura de las imágenes */
-  object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
+.container{
+  background-color: aqua;
+  margin-top: 30px
 }
 
-/* Cuadrado azul superpuesto */
-.overlay {
-  position: absolute;
-  top: 20%; /* Posiciona el cuadrado 20% desde la parte superior */
-  left: 10%; /* Posiciona el cuadrado 10% desde la izquierda */
-  width: 80%; /* Ancho del cuadrado (ajustable) */
-  height: 60%; /* Alto del cuadrado (ajustable) */
-  background-color: rgba(0, 0, 255, 0.5); /* Azul con opacidad */
-  z-index: 1; /* Asegura que el cuadrado esté encima del carrusel */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
-/* Estilo para el texto dentro del cuadro azul */
-.overlay-text {
-  color: white; /* Cambia el color del texto para que contraste con el fondo azul */
-  font-size: 20px;
-  text-align: center;
-}
 
 
 /* ------------------------------------------------------------------------------------------
@@ -257,37 +232,14 @@ video.fillWidth {
   }
   .hamburger-menu {
     
-    top: 120px !important;
-  left: 80px !important;
+    top: 10px !important;
+  left: 10px !important;
   }
 }
 
 
-/* Estilos del carrusel */
-.carousel-inner img {
-  height: 300px;  /* Establece la altura de las imágenes */
-  object-fit: cover; /* Asegura que las imágenes mantengan su proporción */
-}
-
-/* Cuadrado azul superpuesto con texto */
-.overlay {
-  position: absolute;
-  top: 80%; /* Posiciona el cuadrado 20% desde la parte superior */
-  left: 10%; /* Posiciona el cuadrado 10% desde la izquierda */
-  width: 40%; /* Ancho del cuadrado (ajustable) */
-  height: 60%; /* Alto del cuadrado (ajustable) */
-  background-color: rgba(0, 0, 255, 0.5); /* Azul con opacidad */
-  z-index: 1; /* Asegura que el cuadrado esté encima del carrusel */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Estilo para el texto dentro del cuadro azul */
-.overlay-text {
-  color: white; /* Cambia el color del texto para que contraste con el fondo azul */
-  font-size: 20px;
-  text-align: center;
+.certifi{
+  margin-top: 150px;
 }
 
 
@@ -295,9 +247,18 @@ video.fillWidth {
 
 
 
+.custom-border-bottom {
+  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
+  width: 60%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
 
+}
+.custom-border-bottom2 {
+  border-bottom: 4px solid #0171C3; /* Línea azul de 2px de grosor */
+  width: 40%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
 
-
+}
 
 
 
@@ -317,11 +278,11 @@ video.fillWidth {
 .slider-container {
   width: fit-content; /* Ocupa el espacio justo para el contenido */
   max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
-  overflow-x: auto; /* o scroll, dependiendo del comportamiento que desees */
+  overflow: hidden; /* Esto evita que aparezca la barra de desplazamiento */
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   margin-top: 60px;
-  background-color: aqua;
+  /* background-color: aqua; */
 }
 
 .slider {
@@ -331,13 +292,13 @@ video.fillWidth {
 }
 
 .slide {
-  min-width: 40%; /* Aumentamos el tamaño de cada diapositiva */
+  min-width: 50%; /* Aumentamos el tamaño de cada diapositiva */
   position: relative; /* Para posicionar el contenido de la diapositiva */
   margin: 0 20px; /* Reducimos el espacio entre las cartas */
 }
 
 .slide img {
-  width: 100%; /* La imagen ocupa todo el ancho de la diapositiva */
+  width: 80%; /* La imagen ocupa todo el ancho de la diapositiva */
   height: 400px; /* Aumentamos la altura de las imágenes */
   object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
   display: block;
@@ -347,7 +308,7 @@ video.fillWidth {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 70%;
   background-color: rgba(0, 102, 204, 0.7); /* Fondo azul con transparencia */
   color: white;
   padding: 20px;
@@ -365,7 +326,7 @@ video.fillWidth {
   margin-top: 30px; /* Margen inferior */
 }
 
-.slider-controls button {
+.slider-controlss button {
   background: none;
   border: 1px solid #000;
   border-radius: 50%;

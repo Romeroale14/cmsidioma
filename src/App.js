@@ -1,25 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import './App.css'; 
-import useContentful from './useContentful'; 
-import 'bootstrap/dist/css/bootstrap.min.css'; 
-import 'bootstrap/dist/js/bootstrap.bundle.min.js'; 
-import { ClipLoader } from 'react-spinners'; 
-import video from './assets/video.mp4'; 
-import alemania from './assets/parte1.png'; 
+import './App.css';
+import useContentful from './useContentful';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+import { ClipLoader } from 'react-spinners';
+import video from './assets/video.mp4';
+import alemania from './assets/parte1.png';
 import alemania2 from './assets/parte2.png';
 import letra1 from './assets/letra1.png';
 import letra2 from './assets/letra2.png';
 
 // Componente principal
 function App() {
-  
- 
+
   // Estado para manejar la lista de autores
   const [authors, setAuthors] = useState([]);
   const { getAuthors } = useContentful(); // Función para obtener autores desde Contentful
   const [loading, setLoading] = useState(true); // Indicador de carga
   const [error, setError] = useState(null); // Manejo de errores
 
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Función para avanzar a la siguiente diapositiva
+  const nextSlide = () => {
+    const totalSlides = document.querySelectorAll('.slide').length;
+    setCurrentSlide((prevSlide) => (prevSlide + 1) % totalSlides);
+  };
+
+  // Función para retroceder a la diapositiva anterior
+  const prevSlide = () => {
+    const totalSlides = document.querySelectorAll('.slide').length;
+    setCurrentSlide((prevSlide) => (prevSlide - 1 + totalSlides) % totalSlides);
+  };
   // Hook de efecto para cargar datos
   useEffect(() => {
     const fetchData = async () => {
@@ -84,60 +96,90 @@ function App() {
           <div className="bar"></div>
         </button>
       </div>
-      <div className='carrusel'>
-        <h1>CERTIFICATION AND COURSES</h1>
-        <h6 className='first'>ALL CERFTIFICATIONS</h6>
-        <h6 className='second'>ALL COURSES</h6>
-        
+
+      {/* certificados y cursos */}
+      <div className="certifi ms-5">
+        <div className="row">
+          <div className="col-12 col-md-6 mt-3 text-start">
+            <h1 className="fs-1">CERTIFICATION AND COURSES</h1>
+          </div>
+
+          <div className="col-6 col-md-3 mt-3 fs-4">
+            <h6 className="fs-4 custom-border-bottom">ALL CERTIFICATIONS</h6>
+          </div>
+
+          <div className="col-6 col-md-3 mt-3">
+            <h6 className="fs-4 custom-border-bottom2">ALL COURSES</h6>
+          </div>
+        </div>
       </div>
-      
-     
-     
-      
-    <div class="slider-container">
-  <div class="slider">
-    <div class="slide">
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ybc5gsqiTQijYdo3mniLFmWylzRG2asEbQ&s" alt=""/>
-      <div class="slide-content">
-        <h2>ITALIAN</h2>
-        <p>Study Italian and get certified!</p>
-        <p>Open doors to new opportunities</p>
-        <button>Get started today!</button>
+
+      <div className="slider-container">
+        <div
+          className="slider"
+          style={{
+            transform: `translateX(-${currentSlide * 40}%)`,
+            transition: 'transform 0.3s ease',
+          }}
+        >
+          {/* Diapositiva 1 */}
+          <div className="slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5ybc5gsqiTQijYdo3mniLFmWylzRG2asEbQ&s"
+              alt="Italian"
+            />
+            <div className="slide-content">
+              <h2>ITALIAN</h2>
+              <p>Study Italian and get certified!</p>
+              <p>Open doors to new opportunities</p>
+              <button className="btn">Get started today! &#8594;</button>
+            </div>
+          </div>
+
+          {/* Diapositiva 2 */}
+          <div className="slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3LvGShMeTVaHF04sdek9VZXG0C75PuOUuA&s"
+              alt="Chinese"
+            />
+            <div className="slide-content">
+              <h2>CHINESE</h2>
+              <p>Study Chinese and get certified!</p>
+              <p>Open doors to new opportunities</p>
+              
+              <button className="btn">Get started today! &#8594;</button>
+            </div>
+          </div>
+
+          {/* Diapositiva 3 */}
+          <div className="slide">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3LvGShMeTVaHF04sdek9VZXG0C75PuOUuA&s"
+              alt="Japanese"
+            />
+            <div className="slide-content">
+              <h2>JAPANESE</h2>
+              <p>Study Japanese and get certified!</p>
+              <p>Open doors to new opportunities</p>
+              <button className="btn">Get started today! &#8594;</button>
+            </div>
+          </div>
+          
+        </div>
       </div>
-    </div>
-    <div class="slide">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3LvGShMeTVaHF04sdek9VZXG0C75PuOUuA&s" alt=""/>
-      <div class="slide-content">
-        <h2>CHINESE</h2>
-        <p>Study Chinese and get certified!</p>
-        <p>Open doors to new opportunities</p>
-        <button>Get started today!</button>
+
+      {/* Controles del carrusel */}
+      <div className="slider-controlss mt-5">
+        <button className="prev-slide" onClick={prevSlide}>
+          &lt;
+        </button>
+        <span className="slide-number">{currentSlide + 1}/3</span>
+        <button className="next-slide" onClick={nextSlide}>
+          &gt;
+        </button>
       </div>
-    </div>
-    <div class="slide">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw3LvGShMeTVaHF04sdek9VZXG0C75PuOUuA&s" alt=""/>
-      <div class="slide-content">
-        <h2>CHINESE</h2>
-        <p>Study Chinese and get certified!</p>
-        <p>Open doors to new opportunities</p>
-        <button>Get started today!</button>
-      </div>
-    </div>
-    </div>
- 
-</div>
-
-<div class="slider-controls">
-    <button class="prev-slide">&lt;</button>
-    <span class="slide-number">1/2</span>
-    <button class="next-slide">&gt;</button>
-  </div>
 
 
-
-
-
-      
     </div>
   );
 }
