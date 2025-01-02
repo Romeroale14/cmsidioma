@@ -1,18 +1,14 @@
 /* Estilos generales para pantallas grandes */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:wght@400;500;700&display=swap');
 *{
-   
     font-family: "Poppins", serif;
     font-weight: 400;
     font-style: normal;
-  
-  
 }
 body {
   margin: 0;
   position: relative;
   overflow-x: hidden; /* Oculta solo la barra horizontal */
-
 }
 
 /* Video responsive */
@@ -88,35 +84,7 @@ video.fillWidth {
 
 
 
-.carrusel {
-  display: grid;
-  grid-auto-flow: column; /* Organiza los elementos en una fila */
-  align-items: center; /* Alinea verticalmente */
-  column-gap: 20px; /* Espacio entre los elementos */
-  background-color: white;
-  padding-top: 90px;
-  padding-left: 10px;
-}
 
-.carrusel h6.first {
-  border-bottom: 2px solid #0171C3; /* Línea roja */
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  width: 85%; /* Línea más corta */
-}
-
-.carrusel h6.second {
-  border-bottom: 2px solid #1E4C5A; /* Línea verde */
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  width: 65%; /* Línea más corta */
-}
-
-
-.container{
-  background-color: aqua;
-  margin-top: 30px
-}
 
 
 
@@ -181,6 +149,35 @@ video.fillWidth {
     top: 10px !important;
   left: 10px !important;
   }
+
+
+  /* -------------------------------------------------------------------------------------------- */
+  .slider-container {
+    margin-top: 20px; /* Reducir el margen superior en pantallas pequeñas */
+    /* margin-left: 10px; */
+  }
+
+  .slider {
+    padding-left: 10px; /* Reducir el padding en la parte izquierda */
+  }
+
+  .slide {
+    min-width: 80%; /* Reducir el tamaño de cada diapositiva */
+    margin: 0 10px; /* Reducir el margen entre las diapositivas */
+  }
+
+  .slide img {
+    height: 250px; /* Reducir la altura de las imágenes en pantallas pequeñas */
+  }
+
+  .slide-content {
+    padding: 10px; /* Reducir el padding del contenido en la diapositiva */
+  }
+
+  .slider-controls button {
+    width: 30px;
+    height: 30px; /* Reducir el tamaño de los botones de control */
+  }
 }
 
 /* Media Query para pantallas grandes (de 1025px a 1440px) */
@@ -207,6 +204,29 @@ video.fillWidth {
     
     top: 10px !important;
   left: 10px !important;
+  }
+
+  /* ----------------------------------------------------------------------------------------------------------- */
+  .slider-container {
+    margin-top: 40px; /* Ajustar el margen superior en pantallas medianas */
+    margin-left: 10px;
+  }
+
+  .slider {
+    padding-left: 20px; /* Reducir el padding en pantallas medianas */
+  }
+
+  .slide {
+    min-width: 60%; /* Reducir ligeramente el tamaño de las diapositivas */
+  }
+
+  .slide img {
+    height: 350px; /* Ajustar la altura de las imágenes */
+  }
+
+  .slider-controls button {
+    width: 35px;
+    height: 35px; /* Ajustar el tamaño de los botones */
   }
   
 }
@@ -235,18 +255,38 @@ video.fillWidth {
     top: 10px !important;
   left: 10px !important;
   }
+
+/* -------------------------------------------------------------------------------------------- */
+
+  .slider-container {
+    margin-top: 60px; /* Mantener el margen superior en pantallas grandes */
+  }
+
+  .slider {
+    padding-left: 40px; /* Mantener el padding original en pantallas grandes */
+  }
+
+  .slide {
+    min-width: 40%; /* Mantener el tamaño original de las diapositivas */
+    margin: 0 20px; /* Mantener el margen original entre las diapositivas */
+  }
+
+  .slide img {
+    height: 400px; /* Mantener la altura original de las imágenes */
+  }
+
+  .slider-controls button {
+    width: 40px;
+    height: 40px; /* Mantener el tamaño original de los botones */
+  }
 }
 
-
+/* ESPACIO ENCABEZADOS */
 .certifi{
   margin-top: 150px;
 }
 
-
-
-
-
-
+/* -------------------------LINEAS DISEÑO TEXTO-------------------------------------------------- */
 .custom-border-bottom {
   border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
   width: 60%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
@@ -259,22 +299,14 @@ video.fillWidth {
   margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
 
 }
+.custom-border-bottom3 {
+  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
+  color: #007FD0;
 
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Estilo para el contenedor del carrusel */
+/* -----------------------------CARRUSEL1------------------------------------------------------------------------------ */
 .slider-container {
   width: fit-content; /* Ocupa el espacio justo para el contenido */
   max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
@@ -316,6 +348,7 @@ video.fillWidth {
   margin: 0 -55px;
 }
 
+/* -----------------------------------CONTROLES DE CARRUSELES-------------------------------------------------- */
 .slider-controls {
   position: absolute;
   bottom: -10px;
@@ -336,82 +369,45 @@ video.fillWidth {
   cursor: pointer;
 }
 
-
-
-/* Para pantallas pequeñas (móviles) */
-@media (max-width: 768px) {
-  .slider-container {
-    margin-top: 20px; /* Reducir el margen superior en pantallas pequeñas */
-  }
-
-  .slider {
-    padding-left: 10px; /* Reducir el padding en la parte izquierda */
-  }
-
-  .slide {
-    min-width: 80%; /* Reducir el tamaño de cada diapositiva */
-    margin: 0 10px; /* Reducir el margen entre las diapositivas */
-  }
-
-  .slide img {
-    height: 250px; /* Reducir la altura de las imágenes en pantallas pequeñas */
-  }
-
-  .slide-content {
-    padding: 10px; /* Reducir el padding del contenido en la diapositiva */
-  }
-
-  .slider-controls button {
-    width: 30px;
-    height: 30px; /* Reducir el tamaño de los botones de control */
-  }
+/* ---------------------------------CARRUSEL2--------------------------------------------------------------------------------- */
+.slider-container2 {
+  width: fit-content; /* Ocupa el espacio justo para el contenido */
+  max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
+  overflow: hidden; /* Esto evita que aparezca la barra de desplazamiento */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-top: 60px;
+  /* background-color: aqua; */
 }
 
-/* Para pantallas medianas (tabletas) */
-@media (max-width: 1024px) {
-  .slider-container {
-    margin-top: 40px; /* Ajustar el margen superior en pantallas medianas */
-  }
-
-  .slider {
-    padding-left: 20px; /* Reducir el padding en pantallas medianas */
-  }
-
-  .slide {
-    min-width: 60%; /* Reducir ligeramente el tamaño de las diapositivas */
-  }
-
-  .slide img {
-    height: 350px; /* Ajustar la altura de las imágenes */
-  }
-
-  .slider-controls button {
-    width: 35px;
-    height: 35px; /* Ajustar el tamaño de los botones */
-  }
+.slider2 {
+  display: flex; /* Alinear las diapositivas horizontalmente */
+  transition: transform 0.5s ease-in-out; /* Transición suave */
+  padding-left: 10px;
 }
 
-/* Para pantallas grandes */
-@media (min-width: 1025px) {
-  .slider-container {
-    margin-top: 60px; /* Mantener el margen superior en pantallas grandes */
-  }
+.slide2 {
+  min-width: 50%; /* Aumentamos el tamaño de cada diapositiva */
+  position: relative; /* Para posicionar el contenido de la diapositiva */
+  margin: 0 20px; /* Reducimos el espacio entre las cartas */
+  padding-top: -20px; /* Ajusta el padding para mover hacia arriba */
+}
 
-  .slider {
-    padding-left: 40px; /* Mantener el padding original en pantallas grandes */
-  }
+.slide2 img {
+  width: 90%; /* La imagen ocupa todo el ancho de la diapositiva */
+  height: auto; /* Aumentamos la altura de las imágenes */
+  object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
+  display: block;
+  border: 10px solid white; /* Borde de 5px de color azul */
+  
+}
 
-  .slide {
-    min-width: 40%; /* Mantener el tamaño original de las diapositivas */
-    margin: 0 20px; /* Mantener el margen original entre las diapositivas */
-  }
-
-  .slide img {
-    height: 400px; /* Mantener la altura original de las imágenes */
-  }
-
-  .slider-controls button {
-    width: 40px;
-    height: 40px; /* Mantener el tamaño original de los botones */
-  }
+.contenedor2 {
+  padding-top: 150px; /* Ajusta según el espacio que necesites */
+}
+.col-5{
+  background-color: #007FD0;
+}
+.letras, .boton{
+  margin-left: 50px;
 }
