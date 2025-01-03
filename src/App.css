@@ -122,6 +122,15 @@ video.fillWidth {
     top: 10px !important;
   left: 10px !important;
   }
+  /* ----------------------------CARRUSEL 2-------------------------------------------------- */
+ 
+  .col-5{
+    background-color: #007FD0;
+    position: relative; /* Necesario para que los hijos absolutos se posicionen dentro de este contenedor */
+  }
+  
+  
+  
 }
 
 /* Media Query para pantallas medianas (de 769px a 1024px) */
@@ -178,6 +187,12 @@ video.fillWidth {
     width: 30px;
     height: 30px; /* Reducir el tamaño de los botones de control */
   }
+  /* ----------------------------CARRUSEL 2-------------------------------------------------- */
+ 
+  .col-5{
+    background-color: brown;
+  }
+  
 }
 
 /* Media Query para pantallas grandes (de 1025px a 1440px) */
@@ -227,6 +242,9 @@ video.fillWidth {
   .slider-controls button {
     width: 35px;
     height: 35px; /* Ajustar el tamaño de los botones */
+  }
+  .col-5{
+    background-color: pink;
   }
   
 }
@@ -279,6 +297,12 @@ video.fillWidth {
     width: 40px;
     height: 40px; /* Mantener el tamaño original de los botones */
   }
+  /* --------------------CARRUSEL 2------------------------------------------------- */
+  
+  .col-5{
+    background-color: #007FD0;
+  }
+  
 }
 
 /* ESPACIO ENCABEZADOS */
@@ -369,45 +393,18 @@ video.fillWidth {
   cursor: pointer;
 }
 
-/* ---------------------------------CARRUSEL2--------------------------------------------------------------------------------- */
-.slider-container2 {
-  width: fit-content; /* Ocupa el espacio justo para el contenido */
-  max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
-  overflow: hidden; /* Esto evita que aparezca la barra de desplazamiento */
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  margin-top: 60px;
-  /* background-color: aqua; */
+
+
+
+.xd23{
+  border-radius: 10px !important;
 }
 
-.slider2 {
-  display: flex; /* Alinear las diapositivas horizontalmente */
-  transition: transform 0.5s ease-in-out; /* Transición suave */
-  padding-left: 10px;
-}
 
-.slide2 {
-  min-width: 50%; /* Aumentamos el tamaño de cada diapositiva */
-  position: relative; /* Para posicionar el contenido de la diapositiva */
-  margin: 0 20px; /* Reducimos el espacio entre las cartas */
-  padding-top: -20px; /* Ajusta el padding para mover hacia arriba */
-}
 
-.slide2 img {
-  width: 90%; /* La imagen ocupa todo el ancho de la diapositiva */
-  height: auto; /* Aumentamos la altura de las imágenes */
-  object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
-  display: block;
-  border: 10px solid white; /* Borde de 5px de color azul */
-  
-}
 
-.contenedor2 {
-  padding-top: 150px; /* Ajusta según el espacio que necesites */
-}
-.col-5{
-  background-color: #007FD0;
-}
-.letras, .boton{
-  margin-left: 50px;
-}
+
+
+
+
+
