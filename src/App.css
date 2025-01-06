@@ -80,14 +80,9 @@ video.fillWidth {
   background-color: white !important; /* Color de las barras */
   border-radius: 2px !important; /* Bordes ligeramente redondeados */
 }
-
-
-
-
-
-
-
-
+.contenedor2{
+  margin-top: 170px !important;
+}
 
 /* ------------------------------------------------------------------------------------------
 ------------------------------------------------------------------------------------ */
@@ -128,7 +123,13 @@ video.fillWidth {
     background-color: #007FD0;
     position: relative; /* Necesario para que los hijos absolutos se posicionen dentro de este contenedor */
   }
+  .letras{
+    margin-left: 25px !important;
+  }
   
+  .contenedor2{
+    margin-top: 130px !important;
+  }
   
   
 }
@@ -297,11 +298,16 @@ video.fillWidth {
     width: 40px;
     height: 40px; /* Mantener el tamaño original de los botones */
   }
+  .letras{
+    margin-left: 120px !important;
+  }
   /* --------------------CARRUSEL 2------------------------------------------------- */
   
   .col-5{
     background-color: #007FD0;
   }
+
+
   
 }
 
