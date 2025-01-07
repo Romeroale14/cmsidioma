@@ -15,49 +15,45 @@ const useContentful = () => {
   
       const sanitizedEntries = entries.items.map((item) => {
         // Extrae la URL de la imagen
-        // const avatarUrl = item.fields.avatar?.fields?.file?.url
-        //   ? `https:${item.fields.avatar.fields.file.url}`
-        //   : ""; // Asegura que la URL tenga protocolo}
-        //   //----------------------------------------------
-        //   const bodyyUrl = item.fields.bodyy?.fields?.file?.url
-        //   ? `https:${item.fields.bodyy.fields.file.url}`
-        //   : ""; // Asegura que la URL tenga protocolo
-        //   //----------------------------------------------
-        //   const carrusel1Url = item.fields.carrusel1?.fields?.file?.url
-        //   ? `https:${item.fields.carrusel1.fields.file.url}`
-        //   : ""; // Asegura que la URL tenga protocolo
-
-        //   //----------------------------------------------
-          const fondo1 = item.fields.fondo1?.fields?.file?.url
-           ? `https:${item.fields.fondo1.fields.file.url}`
-          : ""; // Asegura que la URL tenga protocolo
-           
-           //----------------------------------------------
-           const logoPaUrl = item.fields.logoPa?.fields?.file?.url
-           ? `https:${item.fields.logoPa.fields.file.url}`
+           const ItaliaCarr1 = item.fields.italiaCarr1?.fields?.file?.url
+            ? `https:${item.fields.italiaCarr1.fields.file.url}`
+           : ""; // Asegura que la URL tenga protocolo
+           const chinaCarr1 = item.fields.chinaCarr1?.fields?.file?.url
+           ? `https:${item.fields.chinaCarr1.fields.file.url}`
            : ""; // Asegura que la URL tenga protocolo
           //----------------------------------------------
-           const FondoNavegador = item.fields.FondoNavegador?.fields?.file?.url
-            ? `https:${item.fields.FondoNavegador.fields.file.url}`
-           : ""; // Asegura que la URL tenga protocolo
+          const espanolCarr1 = item.fields.espanolCarr1?.fields?.file?.url
+          ? `https:${item.fields.espanolCarr1.fields.file.url}`
+          : ""; // Asegura que la URL tenga protocolo
+         //----------------------------------------------
+         const francesCarr1 = item.fields.francesCarr1?.fields?.file?.url
+          ? `https:${item.fields.francesCarr1.fields.file.url}`
+          : ""; // Asegura que la URL tenga protocolo
+          //----------------------------------------------
+         const alemanCarr1 = item.fields.alemanCarr1?.fields?.file?.url
+         ? `https:${item.fields.alemanCarr1.fields.file.url}`
+         : ""; // Asegura que la URL tenga protocolo
+          //----------------------------------------------
+          const inglesCarr1 = item.fields.inglesCarr1?.fields?.file?.url
+          ? `https:${item.fields.inglesCarr1.fields.file.url}`
+          : ""; // Asegura que la URL tenga protocolo
+          //----------------------------------------------
+          const cert1 = item.fields.cert1?.fields?.file?.url
+          ? `https:${item.fields.cert1.fields.file.url}`
+          : ""; // Asegura que la URL tenga protocolo
+        
    
   
         return {
-          // nombre: item.fields.nombre || "", // Maneja campo nombre
-          // descripcion: item.fields.descripccion || "", // Maneja campo descripcción
-          // avatar: avatarUrl, // URL completa de la 
-          // bodyy: bodyyUrl,
-          // carrusel1: carrusel1Url,
-          // carrusel2: carrusel2Url,
-          // ingles:inglesUrl,
-          // español:españolUrl,
-          // china: chinalUrl,
-          // aleman: alemanUrl,
-          // frances: francesUrl,
-          // italiano: italianoUrl,
-          fondo1:fondo1,
-          logoPa: logoPaUrl,
-          FondoNavegador: FondoNavegador,
+         
+          ItaliaCarr1: ItaliaCarr1,
+          chinaCarr1: chinaCarr1,
+          espanolCarr1: espanolCarr1,
+          francesCarr1: francesCarr1,
+          alemanCarr1: alemanCarr1,
+          inglesCarr1: inglesCarr1,
+          cert1:cert1,
+          
           // videoRep: videoRepUrl,
         };
       });

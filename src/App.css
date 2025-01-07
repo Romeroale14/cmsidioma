@@ -10,7 +10,7 @@ body {
   position: relative;
   overflow-x: hidden; /* Oculta solo la barra horizontal */
 }
-
+/* --------------------------ENCABEZADO------------------------------------ */
 /* Video responsive */
 .video-container {
   display: flex;
@@ -41,11 +41,11 @@ video.fillWidth {
   z-index: -1;
 }
 
-/* Botón que se ajusta en PC */
-.btn-primary {
-  background-color: #1E4C5A !important;
+/* Botón que se ajusta en PC DEL ENCABEZAD PRIN SEE MORE*/
+/* .btn-primary {
+  background-color: #007FD0 !important;
   color: white !important;
-  border-color: #1E4C5A !important;
+  border-color: #007FD0 !important;
   position: absolute;
   margin: 0;
   
@@ -56,9 +56,9 @@ video.fillWidth {
   background-color: white !important;
   color: #1E4C5A !important;
   border-color: white !important;
-}
+} */
 
-/* Menú hamburguesa */
+/* ------------------------MENU HAMBURGUESA ------------------------------------------------- */
 .hamburger-menu {
   background-color: transparent !important;
   border: none !important;
@@ -80,12 +80,94 @@ video.fillWidth {
   background-color: white !important; /* Color de las barras */
   border-radius: 2px !important; /* Bordes ligeramente redondeados */
 }
-.contenedor2{
+
+.contenedorCarru2{
   margin-top: 170px !important;
 }
+/* -------------------------LINEAS DISEÑO TEXTO-------------------------------------------------- */
+.custom-border-bottom {
+  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
+  width: 60%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
 
-/* ------------------------------------------------------------------------------------------
------------------------------------------------------------------------------------- */
+}
+.custom-border-bottom2 {
+  border-bottom: 4px solid #0171C3; /* Línea azul de 2px de grosor */
+  width: 40%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
+
+}
+.custom-border-bottom3 {
+  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
+  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
+  color: #007FD0;
+
+}
+
+/* -----------------------------CARRUSEL1------------------------------------------------------------------------------ */
+.slider-container {
+  width: fit-content; /* Ocupa el espacio justo para el contenido */
+  width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
+  overflow: hidden; /* Esto evita que aparezca la barra de desplazamiento */
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  margin-top: 60px;
+  /* background-color: aqua; */
+}
+
+.slider {
+  display: flex; /* Alinear las diapositivas horizontalmente */
+}
+
+.slide {
+  min-width: 50%; /* Aumentamos el tamaño de cada diapositiva */
+  position: relative; /* Para posicionar el contenido de la diapositiva */
+  margin: 0 20px; /* Reducimos el espacio entre las cartas */
+}
+
+.slide img {
+  width: 80%; /* La imagen ocupa todo el ancho de la diapositiva */
+  height: 400px; /* Aumentamos la altura de las imágenes */
+  object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
+  display: block;
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70%;
+  background-color: rgba(0, 102, 204, 0.7); /* Fondo azul con transparencia */
+  color: white;
+  padding: 1px;
+  box-sizing: border-box;
+  margin: 0 -50px;
+}
+
+/* -----------------------------------CONTROLES DE CARRUSELES-------------------------------------------------- */
+.slider-controls {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  margin-top: 30px; /* Margen inferior */
+}
+
+.slider-controlss button {
+  background: none;
+  border: 1px solid #000;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+
+
+/* --------------------------------------------------------------------------------- */
 /* Media Query para pantallas pequeñas (hasta 768px) */
 @media (max-width: 768px) {
   .video-container {
@@ -117,11 +199,22 @@ video.fillWidth {
     top: 10px !important;
   left: 10px !important;
   }
+  /* ----------------------CARRUSEL 1--------------------------------------------------------------------- */
+  .slide {
+    min-width: 35%; /* Mantener el tamaño original de las diapositivas */
+    margin: 0 19px; /* Mantener el margen original entre las diapositivas */
+  }
+  .slider {
+    display: flex; /* Alinear las diapositivas horizontalmente */
+    padding-left: 40px !important;
+  }
+  
   /* ----------------------------CARRUSEL 2-------------------------------------------------- */
  
   .col-5{
     background-color: #007FD0;
     position: relative; /* Necesario para que los hijos absolutos se posicionen dentro de este contenedor */
+    border-radius: 10px;
   }
   .letras{
     margin-left: 25px !important;
@@ -130,8 +223,13 @@ video.fillWidth {
   .contenedor2{
     margin-top: 130px !important;
   }
+  .certifi{
+    margin-top: 100px;
+  }
   
-  
+  .carousel-inner{
+    margin-top: 100px !important;
+  }
 }
 
 /* Media Query para pantallas medianas (de 769px a 1024px) */
@@ -167,12 +265,15 @@ video.fillWidth {
     /* margin-left: 10px; */
   }
 
+  
   .slider {
-    padding-left: 10px; /* Reducir el padding en la parte izquierda */
+    display: flex; /* Alinear las diapositivas horizontalmente */
+    padding-left: 50px !important;
   }
+  
 
   .slide {
-    min-width: 80%; /* Reducir el tamaño de cada diapositiva */
+    min-width: 40%; /* Reducir el tamaño de cada diapositiva */
     margin: 0 10px; /* Reducir el margen entre las diapositivas */
   }
 
@@ -188,12 +289,23 @@ video.fillWidth {
     width: 30px;
     height: 30px; /* Reducir el tamaño de los botones de control */
   }
+  .certifi{
+    margin-top: 150px;
+  }
   /* ----------------------------CARRUSEL 2-------------------------------------------------- */
  
   .col-5{
-    background-color: brown;
+    background-color: #007FD0;
+    border-radius: 10px;
   }
-  
+  .letras{
+    margin-left: 20px !important;
+    margin-bottom: 50px;
+  }
+  .carousel-inner{
+    margin-top: 50% !important;
+  }
+ 
 }
 
 /* Media Query para pantallas grandes (de 1025px a 1440px) */
@@ -222,18 +334,19 @@ video.fillWidth {
   left: 10px !important;
   }
 
-  /* ----------------------------------------------------------------------------------------------------------- */
+  /* --------------------------------CARRUSEL 1---------------------------------------------------------------- */
   .slider-container {
     margin-top: 40px; /* Ajustar el margen superior en pantallas medianas */
-    margin-left: 10px;
+    
   }
 
   .slider {
-    padding-left: 20px; /* Reducir el padding en pantallas medianas */
+    padding-left: 30px; /* Reducir el padding en pantallas medianas */
   }
 
   .slide {
-    min-width: 60%; /* Reducir ligeramente el tamaño de las diapositivas */
+    min-width: 40%; /* Reducir ligeramente el tamaño de las diapositivas */
+    margin: 0 15px; /* Reducimos el espacio entre las cartas */
   }
 
   .slide img {
@@ -244,14 +357,30 @@ video.fillWidth {
     width: 35px;
     height: 35px; /* Ajustar el tamaño de los botones */
   }
+  .certifi{
+    margin-top: 150px;
+  }
+  .slide-content {
+    padding: 10px; /* Reducir el padding del contenido en la diapositiva */
+  }
+  /* --------------------------CARRUSEL 2------------------------------ */
   .col-5{
-    background-color: pink;
+    background-color: #007FD0;
+    border-radius: 10px;
+  }
+  .letras{
+    margin-left: 20px !important;
+    margin-bottom: 50px;
+  }
+  .carousel-inner{
+    margin-top: 10vh !important;
   }
   
 }
 
 /* Media Query para pantallas extra grandes (mayores de 1440px) */
 @media (min-width: 1441px) {
+
   .video-container {
     height: 800px;  /* Mantener el alto del video en pantallas extra grandes */
   }
@@ -274,11 +403,14 @@ video.fillWidth {
     top: 10px !important;
   left: 10px !important;
   }
-
-/* -------------------------------------------------------------------------------------------- */
+.certifi{
+  margin-top: 150px;
+}
+/* ----------------------------CARRUSEL1---------------------------------------------------- */
 
   .slider-container {
     margin-top: 60px; /* Mantener el margen superior en pantallas grandes */
+    
   }
 
   .slider {
@@ -299,118 +431,25 @@ video.fillWidth {
     height: 40px; /* Mantener el tamaño original de los botones */
   }
   .letras{
-    margin-left: 120px !important;
+    margin-left: 20px !important;
+    margin-bottom: 50px;
   }
   /* --------------------CARRUSEL 2------------------------------------------------- */
   
   .col-5{
     background-color: #007FD0;
+    border-radius: 10px;
   }
-
+  .carousel-inner{
+    margin-top: 5vh !important;
+  }
 
   
 }
 
-/* ESPACIO ENCABEZADOS */
-.certifi{
-  margin-top: 150px;
+.sec4{
+  
+  margin-top: 15vh;
 }
-
-/* -------------------------LINEAS DISEÑO TEXTO-------------------------------------------------- */
-.custom-border-bottom {
-  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
-  width: 60%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
-  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
-
-}
-.custom-border-bottom2 {
-  border-bottom: 4px solid #0171C3; /* Línea azul de 2px de grosor */
-  width: 40%;  /* Ajusta el ancho de la línea a la mitad del ancho del elemento */
-  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
-
-}
-.custom-border-bottom3 {
-  border-bottom: 4px solid #1E4C5A; /* Línea azul de 2px de grosor */
-  margin-bottom: 10px;  /* Opcional: espacio debajo de la línea */
-  color: #007FD0;
-
-}
-
-/* -----------------------------CARRUSEL1------------------------------------------------------------------------------ */
-.slider-container {
-  width: fit-content; /* Ocupa el espacio justo para el contenido */
-  max-width: 100%; /* Ancho máximo para que no se desborde en pantallas grandes */
-  overflow: hidden; /* Esto evita que aparezca la barra de desplazamiento */
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  margin-top: 60px;
-  /* background-color: aqua; */
-}
-
-.slider {
-  display: flex; /* Alinear las diapositivas horizontalmente */
-  transition: transform 0.5s ease-in-out; /* Transición suave */
-  padding-left: 40px;
-}
-
-.slide {
-  min-width: 50%; /* Aumentamos el tamaño de cada diapositiva */
-  position: relative; /* Para posicionar el contenido de la diapositiva */
-  margin: 0 20px; /* Reducimos el espacio entre las cartas */
-}
-
-.slide img {
-  width: 80%; /* La imagen ocupa todo el ancho de la diapositiva */
-  height: 400px; /* Aumentamos la altura de las imágenes */
-  object-fit: cover; /* Aseguramos que las imágenes mantengan su proporción */
-  display: block;
-}
-
-.slide-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70%;
-  background-color: rgba(0, 102, 204, 0.7); /* Fondo azul con transparencia */
-  color: white;
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 0 -55px;
-}
-
-/* -----------------------------------CONTROLES DE CARRUSELES-------------------------------------------------- */
-.slider-controls {
-  position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  margin-top: 30px; /* Margen inferior */
-}
-
-.slider-controlss button {
-  background: none;
-  border: 1px solid #000;
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-
-
-
-.xd23{
-  border-radius: 10px !important;
-}
-
-
-
-
-
-
-
 
 
