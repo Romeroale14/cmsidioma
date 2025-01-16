@@ -276,9 +276,7 @@ function App() {
         <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse consequatur placeat recusandae iusto corrupti velit impedit ipsum. Accusamus itaque corrupti, libero magni perferendis similique dolores aperiam voluptatum cum qui eius!</p>
           
       </div>
-      <div>
-        
-      </div>
+      
       
 
 
