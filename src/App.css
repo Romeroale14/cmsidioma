@@ -12,14 +12,17 @@ body {
 }
 /* --------------------------ENCABEZADO------------------------------------ */
 /* Video responsive */
+
 .video-container {
   display: block;
   position: relative;
   top: 0;
   left: 0;
-  height: 1000px;
+  min-height: 100vh; /* Asegura una altura mínima del 100% de la vista */
   width: 100%;
   overflow: hidden;
+  height: auto; /* Permite que la altura crezca con el contenido */
+  background-attachment: fixed;
 }
 
 video.fillWidth {
@@ -30,6 +33,7 @@ video.fillWidth {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  background-attachment: fixed;
 }
 
 /* Fondo que se adapta */
@@ -39,6 +43,7 @@ video.fillWidth {
   width: 100%;
   height: 120%;
   z-index: -1;
+  background-attachment: fixed;
 }
 
 
@@ -56,7 +61,7 @@ video.fillWidth {
 /* -------------------------BANNER--------------------------------------------------- */
 /* CONTENEDOR PRINCIPAL BANNER */
 .banner{
-  margin: 15vh;
+  margin: 30vh;
 }
 
 .text2{
@@ -118,3 +123,65 @@ video.fillWidth {
 }
 
 
+.experience{
+  margin-top: 25vh;
+}
+
+
+.video-containerr {
+  margin-top: 20vh;
+  width: 100%; /* Contenedor ocupa todo el ancho */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000; /* Fondo opcional */
+}
+
+.video-full-width {
+  width: 100%; /* Video ocupa todo el ancho del contenedor */
+  height: auto; /* Mantiene la relación de aspecto */
+}
+
+
+
+
+.imgcarru{
+  width: 150px;
+  margin: 0 20px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.scrolll{
+  margin-top: 30vh;
+}
+
+.scrolll{
+ 
+  position: relative;
+  display: flex;
+  width: 1200px;
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+}
+
+.scrolll div{
+  
+  white-space: nowrap;
+  animation: animate 50s linear infinite;
+}
+
+
+@keyframes animate {
+  0%{
+      transform: translateX(0);
+  }
+
+  100%{
+      transform: translateX(-100%);
+  }
+}
+
+.scrolll:hover div{
+  animation-play-state: paused;
+}
