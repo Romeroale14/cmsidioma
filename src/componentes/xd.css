@@ -1,0 +1,171 @@
+.app-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Coloca el video detrás del contenido */
+  }
+ 
+  
+  
+/* ---------------------------------NAV--------------------------------------- */
+.logo{
+    width: 80px;
+    height: 70px;
+  }
+  .logo2{
+    width: 60px;
+    height: 60px;
+  }
+  
+  .logo5{
+    width: 40px;
+    height: 40px;
+  }
+  
+  
+  /* -------------------------BANNER--------------------------------------------------- */
+  /* CONTENEDOR PRINCIPAL BANNER */
+  .banner{
+    margin: 30vh;
+  }
+  
+  .text2{
+    letter-spacing: 0.22em; /* Más flexible y relativo al tamaño de la fuente */
+    font-size: 2.7rem;
+  }
+  .textt{
+    letter-spacing: 0.28em; /* Más flexible y relativo al tamaño de la fuente */
+    margin-left: 3px;
+   
+  }
+  /* Reducir el interlineado */
+  .banner p, .banner li, .banner h1, .banner h2 {
+    line-height: .8; /* Valor menor para un interlineado más pequeño */
+  }
+  /* AVION */
+  .logo3{
+    width: 200px;
+    height: 200px;
+    animation-name: mianimacion;
+    position: relative;
+    animation-direction: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation: fly 3s linear infinite; /* Repite la animación sin regresar */
+    position: relative;
+  }
+  
+  
+  /* ---------------------------MOVIMIENTO AVION------------------------- */
+  @keyframes fly {
+    0% {
+      transform: translate(-350px, 60px); /* Posición inicial */
+    }
+    100% {
+      transform: translate(400px,-150px); /* Posición final */
+    }
+  }
+  
+  
+  /* -------------PANTALLA CHICAS PHONE---------------------------------- */
+  @media (min-width: 375px) and (max-width: 670px) {
+    .logo{
+      width: 40px;
+      height: 30px;
+    }
+    .logo2{
+      margin-top: -17px;
+      width: 30px;
+      height: 30px;
+    }
+  
+    .menux{
+      font-size: 8px !important;
+    }
+    .lista{
+      margin-top: 20px;
+    }
+  }
+  
+  
+  .experience{
+    margin-top: 25vh;
+  }
+  
+  .letras{
+    font-size: 10px;
+  }
+  .video-containerr {
+    margin-top: 20vh;
+    width: 100%; /* Contenedor ocupa todo el ancho */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; /* Fondo opcional */
+  }
+  
+  .video-full-width {
+    width: 100%; /* Video ocupa todo el ancho del contenedor */
+    height: auto; /* Mantiene la relación de aspecto */
+  }
+  
+  
+  
+  
+  .imgcarru{
+    width: 150px;
+    margin: 0 20px;
+    transition: .5s;
+    cursor: pointer;
+  }
+  
+  .scrolll{
+    margin-top: 30vh;
+  }
+  
+  .scrolll{
+   
+    position: relative;
+    display: flex;
+    width: 1200px;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent, #fff 20%, #fff 80%, transparent);
+  }
+  
+  .scrolll div{
+    
+    white-space: nowrap;
+    animation: animate 50s linear infinite;
+  }
+  
+  
+  @keyframes animate {
+    0%{
+        transform: translateX(0);
+    }
+  
+    100%{
+        transform: translateX(-100%);
+    }
+  }
+  
+  .scrolll:hover div{
+    animation-play-state: paused;
+  }
+  
+  
+  
+  .border {
+    border-radius: 20px !important; /* Ajusta el valor a tu preferencia */
+  }
+  
